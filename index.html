@@ -20,7 +20,7 @@
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
   --r: 6px;
   --gutter: 1rem;
-  --nav-h: 4.1rem;
+  --nav-h: 4.4rem;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -36,8 +36,8 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; font-size: 112.5%; }
-@media (min-width: 46rem) { html { font-size: 118.75%; } }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; font-size: 125%; }
+@media (min-width: 46rem) { html { font-size: 131.25%; } }
 body {
   background: var(--paper); color: var(--ink);
   font: 400 1rem/1.55 var(--font-body);
@@ -70,14 +70,14 @@ p { margin: 0; max-width: 65ch; text-wrap: pretty; }
 
 /* Hero */
 .hero { padding-top: 2rem; }
-.hero h1 { font-size: clamp(3.5rem, 19vw, 6rem); font-weight: 800; letter-spacing: -0.04em; line-height: .92; }
+.hero h1 { font-size: clamp(3rem, 15vw, 5.5rem); font-weight: 800; letter-spacing: -0.04em; line-height: .92; }
 .hero .sub { margin-top: 1rem; font-size: 1.2rem; }
 .route { margin-top: 1.75rem; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 2px solid var(--ink); }
-.route a { text-decoration: none; padding: .75rem .3rem .75rem 0; min-height: 4.5rem; display: block; position: relative; }
+.route a { text-decoration: none; padding: .75rem .2rem .75rem 0; min-height: 4.5rem; display: block; position: relative; }
 .route a::before { content: ""; position: absolute; top: -6px; left: 0; width: 10px; height: 10px; background: var(--paper); border: 2px solid var(--ink); border-radius: 50%; }
 .route a.today::before { background: var(--accent); border-color: var(--accent); }
-.route .d { font: 500 .85rem var(--font-mono); color: var(--muted); display: block; padding-top: .35rem; }
-.route .c { font: 700 1rem/1.1 var(--font-display); display: block; margin-top: .15rem; }
+.route .d { font: 500 .8rem var(--font-mono); color: var(--muted); display: block; padding-top: .35rem; }
+.route .c { font: 700 .88rem/1.1 var(--font-display); display: block; margin-top: .15rem; }
 .route a:hover .c { color: var(--accent); }
 
 /* Next up */
@@ -181,8 +181,8 @@ a.txt { text-decoration: underline; text-decoration-color: var(--accent); text-u
 /* Bottom nav */
 .nav { position: fixed; inset: auto 0 0 0; background: var(--paper); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom, 0px); z-index: 10; }
 .nav ul { list-style: none; margin: 0 auto; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); max-width: 44rem; }
-.nav a { display: grid; justify-items: center; align-content: center; gap: .15rem; height: var(--nav-h); text-decoration: none; font: 500 .8rem var(--font-body); color: var(--muted); position: relative; }
-.nav a .i { width: 1.5rem; height: 1.5rem; }
+.nav a { display: grid; justify-items: center; align-content: center; gap: .2rem; height: var(--nav-h); text-decoration: none; font: 600 .85rem/1 var(--font-body); color: var(--muted); position: relative; }
+.nav a .i { width: 1.65rem; height: 1.65rem; stroke-width: 1.9; }
 .nav a[aria-current="page"] { color: var(--accent); font-weight: 700; }
 .nav a[aria-current="page"]::before { content: ""; position: absolute; top: -1px; left: 25%; right: 25%; height: 3px; background: var(--accent); }
 
