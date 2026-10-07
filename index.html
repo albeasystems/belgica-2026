@@ -1,3 +1,5 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Viaje a Bélgica</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +42,7 @@ body {
   background: var(--paper); color: var(--ink);
   font: 400 1rem/1.55 var(--font-body);
   padding-inline: var(--gutter);
-  padding-block: 0 calc(var(--nav-h) + 2.5rem);
+  padding-block: 0 calc(var(--nav-h) + 2.5rem + env(safe-area-inset-bottom, 0px));
   margin: 0;
 }
 ::selection { background: var(--accent); color: var(--on-accent); }
@@ -71,11 +73,11 @@ p { margin: 0; max-width: 65ch; text-wrap: pretty; }
 .hero h1 { font-size: clamp(3.5rem, 19vw, 6rem); font-weight: 800; letter-spacing: -0.04em; line-height: .92; }
 .hero .sub { margin-top: 1rem; font-size: 1.2rem; }
 .route { margin-top: 1.75rem; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 2px solid var(--ink); }
-.route a { text-decoration: none; padding: .75rem .5rem .75rem 0; min-height: 4.5rem; display: block; position: relative; }
+.route a { text-decoration: none; padding: .75rem .3rem .75rem 0; min-height: 4.5rem; display: block; position: relative; }
 .route a::before { content: ""; position: absolute; top: -6px; left: 0; width: 10px; height: 10px; background: var(--paper); border: 2px solid var(--ink); border-radius: 50%; }
 .route a.today::before { background: var(--accent); border-color: var(--accent); }
-.route .d { font: 500 .9rem var(--font-mono); color: var(--muted); display: block; padding-top: .35rem; }
-.route .c { font: 700 1.1rem/1.1 var(--font-display); display: block; margin-top: .15rem; }
+.route .d { font: 500 .85rem var(--font-mono); color: var(--muted); display: block; padding-top: .35rem; }
+.route .c { font: 700 1rem/1.1 var(--font-display); display: block; margin-top: .15rem; }
 .route a:hover .c { color: var(--accent); }
 
 /* Next up */
